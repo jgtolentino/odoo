@@ -1,0 +1,81 @@
+# OCA Must Have Modules – pip / git-based installation
+#
+# Install with:
+#   pip install -r requirements_oca.txt
+#
+# NOTE: OCA modules are installed as editable git checkouts so that Odoo can
+# find them on the addons path.
+#
+# ODOO VERSION: all URLs below use branch "17.0".  To target a different
+# Odoo version (e.g. 16.0), replace every occurrence of "@17.0" in this file:
+#
+#   sed -i 's/@17\.0/@16.0/g' requirements_oca.txt
+#
+
+# ---------------------------------------------------------------------------
+# Base
+# ---------------------------------------------------------------------------
+# server-tools (base_setup, base_technical_user, base_tier_validation,
+#               base_field_m2m_view, base_import_match, auditlog,
+#               database_cleanup, module_auto_update)
+-e git+https://github.com/OCA/server-tools.git@17.0#egg=oca_server_tools
+
+# queue (queue_job)
+-e git+https://github.com/OCA/queue.git@17.0#egg=oca_queue
+
+# social (mail_tracking)
+-e git+https://github.com/OCA/social.git@17.0#egg=oca_social
+
+# web (web_responsive, web_refresher)
+-e git+https://github.com/OCA/web.git@17.0#egg=oca_web
+
+# partner-contact (base_address_extended, partner_firstname)
+-e git+https://github.com/OCA/partner-contact.git@17.0#egg=oca_partner_contact
+
+# ---------------------------------------------------------------------------
+# Accounting
+# ---------------------------------------------------------------------------
+# account-financial-reporting (account_financial_report, account_tax_balance)
+-e git+https://github.com/OCA/account-financial-reporting.git@17.0#egg=oca_account_financial_reporting
+
+# mis-builder (mis_builder)
+-e git+https://github.com/OCA/mis-builder.git@17.0#egg=oca_mis_builder
+
+# account-financial-tools (account_due_list, account_payment_term_extension,
+#                           account_move_line_purchase_info)
+-e git+https://github.com/OCA/account-financial-tools.git@17.0#egg=oca_account_financial_tools
+
+# account-invoice-reporting (account_invoice_report_due_date)
+-e git+https://github.com/OCA/account-invoice-reporting.git@17.0#egg=oca_account_invoice_reporting
+
+# currency (currency_rate_update)
+-e git+https://github.com/OCA/currency.git@17.0#egg=oca_currency
+
+# ---------------------------------------------------------------------------
+# Sales
+# ---------------------------------------------------------------------------
+# sale-workflow (sale_order_lot_selection, sale_order_line_description,
+#                sale_order_price_recalculation, product_pricelist_direct_print,
+#                sale_partner_pricelist, sale_planner_calendar,
+#                sale_stock_picking_note)
+-e git+https://github.com/OCA/sale-workflow.git@17.0#egg=oca_sale_workflow
+
+# crm (crm_lead_lost_reason_required)
+-e git+https://github.com/OCA/crm.git@17.0#egg=oca_crm
+
+# ---------------------------------------------------------------------------
+# Purchases
+# ---------------------------------------------------------------------------
+# purchase-workflow (purchase_order_type, purchase_request,
+#                    purchase_price_security, purchase_order_approved,
+#                    purchase_stock_picking_return_invoicing,
+#                    purchase_order_line_description)
+-e git+https://github.com/OCA/purchase-workflow.git@17.0#egg=oca_purchase_workflow
+
+# ---------------------------------------------------------------------------
+# Projects
+# ---------------------------------------------------------------------------
+# project (project_timeline, project_task_add_very_high, project_status,
+#          project_stage_closed, project_task_dependency,
+#          project_recurring_task)
+-e git+https://github.com/OCA/project.git@17.0#egg=oca_project
