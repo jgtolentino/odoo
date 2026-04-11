@@ -1,0 +1,21 @@
+# OCA repository dependencies for Maintainer Quality Tools (MQT).
+# Format: <repo_slug> [<git_url>] [<branch>]
+# See https://github.com/OCA/maintainer-quality-tools for details.
+#
+# These repositories contain the OCA Must Have modules referenced in
+# oca_must_have/__manifest__.py.
+
+server-tools
+queue
+social
+web
+partner-contact
+account-financial-reporting
+mis-builder
+account-financial-tools
+account-invoice-reporting
+currency
+sale-workflow
+crm
+purchase-workflow
+project
